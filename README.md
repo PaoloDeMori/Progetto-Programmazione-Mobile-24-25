@@ -22,6 +22,7 @@ In questa repository si trovano diverse cartelle:
 - `ApplicazioneKotlinCompose`: Contiene il codice sorgente dell'applicazione in Kotlin per Android.
 - `Backend`: Contiene il fat JAR eseguibile del backend (scritto in Kotlin), un file di configurazione d'esempio e il codice sorgente del backend stesso.
 - `Mysql-Db`: Contiene il DDL per creare la struttura del database utilizzato dal backend per la memorizzazione dei dati.
+- `Mockups`: Contiene i mockup che abbiamo realizzato per orientarci con la realizzazione della ui
 
 ---
 
