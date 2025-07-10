@@ -18,7 +18,7 @@ L’obiettivo di **APPranzo** è offrire un’esperienza completa e coinvolgente
 
 ## Contenuto della Repository
 In questa repository si trovano diverse cartelle:
-- `Apk`: Una cartella contenente un file `.apk` dell'applicazione per Android da poter eseguire su un dispositivo mobile. Per la comunicazione con il backend in localhost (ad esempio, su un emulatore o un dispositivo connesso tramite ADB), l'app sfrutta le funzionalità di ADB per reindirizzare il traffico verso l'host locale.
+- `Apk`: Una cartella contenente un file `.apk` dell'applicazione per Android da poter eseguire su un dispositivo mobile. Per la comunicazione con il backend in localhost (ad esempio un dispositivo connesso tramite ADB)
 - `ApplicazioneKotlinCompose`: Contiene il codice sorgente dell'applicazione in Kotlin per Android.
 - `Backend`: Contiene il fat JAR eseguibile del backend (scritto in Kotlin), un file di configurazione d'esempio e il codice sorgente del backend stesso.
 - `Mysql-Db`: Contiene il DDL per creare la struttura del database utilizzato dal backend per la memorizzazione dei dati.
