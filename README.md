@@ -116,4 +116,6 @@ In questa repository si trovano diverse cartelle:
 ---
 
 ## Avvio dell'App
+La App deve essere eseguita o tramite android-studio utilizzando il codice sorgente, o nel caso in cui si voglia una versione già pronta per comunicazione con localhost si può utilizzare l'apk da noi fornito
+
 Al primo avvio si presenta la schermata di login, da cui è possibile registrarsi. Dagli avvii successivi, l'accesso sarà automatico grazie all'uso dei token JWT (se il token non è scaduto). Una volta effettuato l'accesso, l'applicazione presenta una Top Bar e una Bottom Bar che permettono la navigazione tra tutte le schermate.
