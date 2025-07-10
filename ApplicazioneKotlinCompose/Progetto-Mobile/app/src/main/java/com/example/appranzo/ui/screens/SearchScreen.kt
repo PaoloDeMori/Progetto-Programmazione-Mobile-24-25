@@ -32,6 +32,7 @@ fun SearchScreen(
     var query by remember { mutableStateOf("") }
     val categories by viewModel.categories.collectAsState()
     val results by viewModel.results.collectAsState()
+    val isNavigationInProgress by viewModel.isNavigationInProgress.collectAsState()
 
     Scaffold(
         topBar = {
@@ -55,7 +56,12 @@ fun SearchScreen(
                         .weight(1f)
                         .height(56.dp)
                 )
-                IconButton(onClick = { navController.popBackStack() }) {
+                IconButton(onClick = {
+                    if(!isNavigationInProgress){
+                    navController.popBackStack()
+                        viewModel.startNavigationLock()
+                    } },
+                    enabled = !isNavigationInProgress) {
                     Icon(Icons.Default.Close, contentDescription = "Chiudi ricerca")
                 }
             }

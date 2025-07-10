@@ -6,6 +6,7 @@ import com.example.appranzo.communication.remote.RestApiClient
 import com.example.appranzo.data.models.Category
 import com.example.appranzo.data.models.Place
 import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
@@ -21,6 +22,10 @@ class SearchViewModel(
 
     private val _results = MutableStateFlow<List<Place>>(emptyList())
     val results: StateFlow<List<Place>> = _results.asStateFlow()
+
+    private var _isNavigationInProgress = MutableStateFlow<Boolean>(false)
+    val isNavigationInProgress: StateFlow<Boolean> = _isNavigationInProgress.asStateFlow()
+
 
     init {
         viewModelScope.launch {
@@ -38,7 +43,16 @@ class SearchViewModel(
         }
     }
 
-    fun setQuery(text: String) {
-        _query.value = text
+    fun startNavigationLock() {
+        if (_isNavigationInProgress.value) return
+
+        _isNavigationInProgress.value = true
+        viewModelScope.launch {
+            delay(900)
+            _isNavigationInProgress.value = false
+        }
     }
+        fun setQuery(text: String) {
+            _query.value = text
+        }
 }
