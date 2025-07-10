@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <queries>
+        <intent>
+            <action android:name="android.settings.WIRELESS_SETTINGS"/>
+        </intent>
+    </queries>
+
+    <application
+        android:name=".APPranzoApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:networkSecurityConfig="@xml/restapi_configuration"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.APPranzo"
+        tools:targetApi="31">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="APPranzo"
+            android:theme="@style/Theme.APPranzo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="APPranzo"
+            android:theme="@style/Theme.APPranzo">
+        </activity>
+
+        <activity
+            android:name=".PlaceDetailActivity"
+            android:exported="false"
+            android:label="APPranzo"
+            android:theme="@style/Theme.APPranzo">
+        </activity>
+
+        <activity
+            android:name=".ReviewActivity"
+            android:exported="false"
+            android:label="APPranzo"
+            android:theme="@style/Theme.APPranzo">
+        </activity>
+
+        <activity
+            android:name=".ReviewDetailActivity"
+            android:exported="false"
+            android:label="APPranzo"
+            android:theme="@style/Theme.APPranzo">
+        </activity>
+
+        <activity
+            android:name=".MapActivity"
+            android:exported="false"
+            android:label="APPranzo"
+            android:theme="@style/Theme.APPranzo">
+        </activity>
+
+        <activity
+            android:name=".BadgeVisualizationActivity"
+            android:exported="false"
+            android:label="APPranzo"
+            android:theme="@style/Theme.APPranzo">
+        </activity>
+
+        <activity
+            android:name=".BadgeDetailActivity"
+            android:exported="false"
+            android:label="APPranzo"
+            android:theme="@style/Theme.APPranzo">
+        </activity>
+
+
+
+
+    </application>
+
+</manifest>
