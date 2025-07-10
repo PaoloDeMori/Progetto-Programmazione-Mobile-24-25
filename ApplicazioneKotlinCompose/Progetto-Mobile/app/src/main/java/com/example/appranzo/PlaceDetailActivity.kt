@@ -15,7 +15,7 @@ import com.example.appranzo.ui.screens.ThemeViewModel
 import com.example.appranzo.ui.theme.APPranzoTheme
 import org.koin.androidx.compose.koinViewModel
 
-class PlaceDetailActivity : ComponentActivity() {
+class PlaceDetailActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val receivedId = intent.getIntExtra("EXTRA_PRODUCT_ID", -1)

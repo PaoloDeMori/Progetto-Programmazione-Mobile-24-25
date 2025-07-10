@@ -45,7 +45,7 @@ import kotlinx.serialization.encodeToString
 
 class RestApiClient(private val httpClient: HttpClient){
     companion object{
-        const val REST_API_ADDRESS = "http://10.0.2.2:8080"
+        const val REST_API_ADDRESS = "http://10.0.2.2:8080"//localhost va bene se si utilizza un dispositivo fisico collegato con cavo, altrimenti per emulatore 10.0.2.2
 
     fun isOnline(ctx:Context):Boolean{
         val connectivityManager = ctx

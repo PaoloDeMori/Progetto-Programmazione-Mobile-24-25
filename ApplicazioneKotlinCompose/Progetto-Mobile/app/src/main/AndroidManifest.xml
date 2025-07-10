@@ -40,14 +40,18 @@
             android:name=".MainActivity"
             android:exported="false"
             android:label="APPranzo"
-            android:theme="@style/Theme.APPranzo">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.APPranzo"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity">
         </activity>
 
         <activity
             android:name=".PlaceDetailActivity"
             android:exported="false"
             android:label="APPranzo"
-            android:theme="@style/Theme.APPranzo">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.APPranzo"
+            tools:ignore="DiscouragedApi,LockedOrientationActivity">
         </activity>
 
         <activity

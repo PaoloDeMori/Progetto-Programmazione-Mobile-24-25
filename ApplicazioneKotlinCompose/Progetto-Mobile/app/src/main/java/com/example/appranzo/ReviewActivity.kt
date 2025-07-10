@@ -15,7 +15,7 @@ import com.example.appranzo.ui.screens.ThemeViewModel
 import com.example.appranzo.ui.theme.APPranzoTheme
 import org.koin.androidx.compose.koinViewModel
 
-class ReviewActivity : ComponentActivity() {
+class ReviewActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
