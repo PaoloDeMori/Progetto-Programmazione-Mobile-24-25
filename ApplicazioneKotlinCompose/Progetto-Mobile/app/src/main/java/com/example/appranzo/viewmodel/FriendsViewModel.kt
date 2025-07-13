@@ -37,7 +37,7 @@ class FriendsViewModel(private val api: RestApiClient) : ViewModel() {
         _usernameInput.value = newUsername
     }
 
-    private fun fetchAllData() {
+     fun fetchAllData() {
         viewModelScope.launch {
             _uiState.value = UiState.LOADING
             try {
@@ -61,7 +61,7 @@ class FriendsViewModel(private val api: RestApiClient) : ViewModel() {
         val pendingRequests=api.getPendingRequests()
         val map:MutableMap<FriendshipRequestDto,String> = LinkedHashMap()
         for(item in pendingRequests){
-            val username = api.getUserById(item.id)
+            val username = api.getUserById(item.senderId)
             map[item] = username?.username?:"Sconosciuto"
         }
         _pendingRequests.update { map }
